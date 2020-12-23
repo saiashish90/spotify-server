@@ -87,7 +87,7 @@ app.get('/callback', function(req, res) {
 					refresh_token = body.refresh_token,
 					expires_in = body.expires_in;
 				res.redirect(
-					'http://localhost:3000/#' +
+					'https://spotify-webplayer.netlify.app/#' +
 						querystring.stringify({
 							access_token  : access_token,
 							refresh_token : refresh_token,
@@ -96,7 +96,7 @@ app.get('/callback', function(req, res) {
 				);
 			} else {
 				res.redirect(
-					'http://localhost:3000/#' +
+					'https://spotify-webplayer.netlify.app/#' +
 						querystring.stringify({
 							error : 'invalid_token'
 						})
